@@ -47,18 +47,16 @@ public class ImageListPreference extends ListPreference {
         TypedArray typedArray = context.obtainStyledAttributes(attrs,
                 R.styleable.ImageListPreference);
 
-        String[] imageNames = context.getResources().getStringArray(
-                typedArray.getResourceId(typedArray.getIndexCount() - 1, -1));
-
-        mResourceIds = new int[imageNames.length];
-
-        for (int i = 0; i < imageNames.length; i++) {
-            String imageName = imageNames[i].substring(
-                    imageNames[i].lastIndexOf('/') + 1,
-                    imageNames[i].lastIndexOf('.'));
-
-            mResourceIds[i] = context.getResources().getIdentifier(imageName,
-                    "drawable", context.getPackageName());
+        int imagesArrayRes = typedArray.getResourceId(R.styleable.ImageListPreference_entryImages, 0);
+        if (imagesArrayRes != 0) {
+            TypedArray images = context.getResources().obtainTypedArray(imagesArrayRes);
+            mResourceIds = new int[images.length()];
+            for (int i = 0; i < images.length(); i++) {
+                mResourceIds[i] = images.getResourceId(i, 0);
+            }
+            images.recycle();
+        } else {
+            mResourceIds = new int[0];
         }
 
         typedArray.recycle();
@@ -113,7 +111,11 @@ public class ImageListPreference extends ListPreference {
             View row = inflater.inflate(R.layout.image_list_item, parent, false);
 
             ImageView imageView = row.findViewById(R.id.image);
-            imageView.setImageResource(resourceIds[position]);
+            if (position < resourceIds.length && resourceIds[position] != 0) {
+                imageView.setImageResource(resourceIds[position]);
+            } else {
+                imageView.setVisibility(View.GONE);
+            }
 
             CheckedTextView checkedTextView = row.findViewById(R.id.check);
 
