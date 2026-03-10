@@ -105,8 +105,8 @@
 
     <!-- About screen (IdenticonSettings.java) -->
     <string name="about">About</string>
-    <string name="support_title">Support</string>
-    <string name="support_summary">Identiconizer-Reborn by GermainZ</string>
+    <string name="support_title">Developer</string>
+    <string name="support_summary">Nicholas - Who\'s Your Data</string>
     <string name="thanks">Thanks</string>
     <string name="chameleonos_title">ChameleonOS Open Source Project</string>
     <string name="chameleonos_summary">For code and resources used in this app</string>
@@ -190,6 +190,6 @@
     <string name="pref_title_vibrate">Vibrate</string>
     <string name="version">Version</string>
     <string name="updated_by_title">Updated by</string>
-    <string name="updated_by_summary">Liftedplane • Submit issues on GitHub</string>
+    <string name="updated_by_summary">Nicholas - Who\'s Your Data - Submit issues on GitHub</string>
 
 </resources>

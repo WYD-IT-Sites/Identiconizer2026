@@ -8,7 +8,7 @@
         android:title="@string/support_title">
         <intent
             android:action="android.intent.action.VIEW"
-            android:data="http://forum.xda-developers.com/showthread.php?t=2718943" />
+            android:data="https://github.com/WYD-IT-Sites/Identiconizer-Reborn" />
     </Preference>
 
     <Preference
