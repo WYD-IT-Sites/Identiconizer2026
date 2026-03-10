@@ -191,5 +191,7 @@
     <string name="version">Version</string>
     <string name="updated_by_title">Updated by</string>
     <string name="updated_by_summary">Liftedplane - Who\'s Your Data - Submit issues on GitHub</string>
+    <string name="original_project_title">Original project</string>
+    <string name="original_project_summary">Code originally developed by GermainZ (XDA)</string>
 
 </resources>

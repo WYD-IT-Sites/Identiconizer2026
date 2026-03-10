@@ -20,6 +20,14 @@
         android:title="@string/updated_by_title"
         android:summary="@string/updated_by_summary" />
 
+    <Preference
+        android:title="@string/original_project_title"
+        android:summary="@string/original_project_summary">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:data="http://forum.xda-developers.com/showthread.php?t=2718943" />
+    </Preference>
+
     <PreferenceCategory android:title="@string/thanks">
 
         <Preference
