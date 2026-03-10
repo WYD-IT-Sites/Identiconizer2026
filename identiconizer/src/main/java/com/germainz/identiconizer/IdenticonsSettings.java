@@ -93,7 +93,7 @@ public class IdenticonsSettings extends AppCompatPreferenceActivity implements O
                     @Override
                     public boolean onPreferenceClick(Preference preference) {
                         Intent issueIntent = new Intent(Intent.ACTION_VIEW,
-                                Uri.parse("https://github.com/WYD-IT-Sites/Identiconizer2026/issues"));
+                                Uri.parse("https://github.com/WYD-IT-Sites/Identiconizer-Reborn/issues"));
                         startActivity(issueIntent);
                         return true;
                     }

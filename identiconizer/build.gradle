@@ -13,6 +13,16 @@ android {
         vectorDrawables.useSupportLibrary = true
     }
 
+    flavorDimensions "distribution"
+    productFlavors {
+        play {
+            dimension "distribution"
+        }
+        full {
+            dimension "distribution"
+        }
+    }
+
     buildTypes {
         release {
             minifyEnabled false
